@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import AramakerLogo from './assets/aramaker-logo.png';
 import './App.css'
 import { Link, Outlet } from "react-router";
 
@@ -14,8 +13,8 @@ function App() {
          <header className="header">
             <div className="header-content">
                <div className="brand">
-                  <h1>Aramaker</h1>
-                  <p>Soluções em impressão 3D</p>
+                  <img src={AramakerLogo} alt="Aramaker Logo" className="aramaker-logo" />
+                  <p>Sua forja de Cosplays Épicos!</p>
                </div>
               <nav className="nav-bar">
                  <Link to="/" className="nav-link">Home</Link>
