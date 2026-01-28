@@ -71,10 +71,10 @@ body {
 
 .header {
    width: 100%;
-   background-color: #ff6b35;
+   background: linear-gradient(to top, #F26419, #CC4A1C);
    color: white;
-   padding: 20px;
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   /* background-image: url("./assets/orange-header.png"); */
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
    position: sticky; /* makes header stick on scroll */
    top: 0;
    z-index: 100;
@@ -90,7 +90,9 @@ body {
 }
 
 .aramaker-logo {
-   height: 100px;
+   margin: 0;
+   padding: 0;
+   height: 75px;
 }
 
 .brand h1 {
@@ -100,12 +102,15 @@ body {
 }
 
 .brand p {
+   margin-top: -20px;
+   margin-left: 20px;
    font-size: 0.9rem;
    opacity: 0.9;
 }
 
 .nav-bar {
    display: flex;
+   padding-right: 40px;
    gap: 12px;
 }
 
@@ -126,7 +131,7 @@ body {
 
 .main-content {
    height: 100vh;
-   position: relatiive;
+   position: relative;
 }
 
 .main-content::before {
