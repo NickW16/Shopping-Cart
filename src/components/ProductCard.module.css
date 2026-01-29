@@ -1,0 +1,13 @@
+.productContainer {
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   border: 2px solid orange;
+   max-width: 500px;
+   padding: 6px;
+   flex-grow: none;
+}
+
+.productContainer img {
+   max-height: 200px;
+   max-width: 250px;
+}
