@@ -1,3 +1,15 @@
+/* font styling */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&family=Michroma&display=swap');
+
+body {
+   font-family: 'Exo 2', sans-serif;
+}
+
+h1, h2 {
+   font-family: 'Michroma', sans-serif;
+}
+/* end of fonts section */
+
 #root {
   margin: 0 auto;
   padding: 2rem;
@@ -52,15 +64,6 @@
    width: 100%;
    min-height: 100vh;
    padding: 0;
-}
-
-/* font styling*/
-body {
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
 }
 
 .app-container {
@@ -130,7 +133,7 @@ body {
 }
 
 .main-content {
-   height: 100vh;
+   min-height: 100vh;
    position: relative;
 }
 

@@ -1,0 +1,184 @@
+.mainPage {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 2rem;
+   padding-bottom: 4rem;
+}
+
+.mainPage h1 {
+   margin-bottom: 20px;
+}
+
+.sliderAndText {
+   display: flex;
+   gap: 2rem;
+   align-items: flex-start;
+   background-color: rgba(0, 0, 0, 0.7);
+   padding: 2rem;
+   border-radius: 15px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sliderContainer {
+   display: flex;
+   flex-direction: column;
+   max-width: 600px;
+   position: relative;
+}
+
+.slider {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   width: 400px;
+   height: 500px;
+   border-radius: 10px;
+   overflow: hidden; /* prevent insane overflow */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider img {
+   position: absolute;
+   border-radius: 20px;
+   width: 350px;
+   object-fit: cover;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.slider img.active {
+   opacity: 1;
+}
+
+.sliderDots {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 1rem;
+}
+
+.dot {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: #ccc;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.dot.active {
+   background-color: #E85D1F;
+}
+
+.dot:hover {
+   background-color: #F26419;
+}
+
+.textContent {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-align: start;
+   max-width: 800px;
+}
+
+li {
+   margin-left: 20px;
+}
+
+.featuresSection {
+   width: 100%;
+   max-width: 70%;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.featuresSection h2 {
+   color: white;
+   font-size: 2rem;
+   margin: 2rem;
+}
+
+.highlightGrid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+}
+
+.highlightCard {
+   background-color: rgba(0, 0, 0, 0.6);
+   padding: 2rem;
+   border-radius: 12px;
+   border: 2px solid #E85D1F;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlightCard:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(232, 93, 31, 0.4);
+}
+
+.highlightCard h3 {
+   color: #F26419;
+   font-size: 1.3rem;
+   margin-bottom: 0.5rem;
+}
+
+.highlightCard p {
+   color: #f0f0f0;
+   font-size: 0.95rem;
+}
+
+/* cta section */
+
+.ctaSection {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   margin-bottom: 3rem;
+}
+
+.ctaButton {
+   background: linear-gradient(135deg, #F26419, #E85D1F);
+   color: white;
+   border: none;
+   padding: 1rem 2rem;
+   font-size: 1.1rem;
+   font-weight: bold;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaButton:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 20px rgba(242, 100, 25, 0.4);
+}
+
+.ctaButtonSecondary {
+   background-color: transparent;
+   color: white;
+   border: 2px solid #F26419;
+   padding: 1rem 2rem;
+   font-size: 1.1rem;
+   font-weight: bold;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.ctaButtonSecondary:hover {
+   background-color: #F26419;
+   transform: translateY(-2px);
+}
+
+@media (max-width: 920px) {
+   .sliderAndText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+}
