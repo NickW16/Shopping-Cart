@@ -7,7 +7,7 @@ const StoreBrowser = () => {
       <div className={styles.mainContainer}>
          <h1 className={styles.title}>Nossa loja</h1>
          <p>Aqui, é possível explorar os itens da loja</p>         
-         <ProductCard />
+         <ProductCard id={0} />
       </div>
    )
 }
