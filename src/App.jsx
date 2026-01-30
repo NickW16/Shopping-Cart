@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { CartProvider, useCart } from './context/CartContext';
 import AramakerLogo from './assets/aramaker-logo.png';
 import './App.css'
 import { Link, Outlet } from "react-router";
 
 
-function App() {
-  const [count, setCount] = useState(0)
+function AppContent() {
+   const { getCartCount } = useCart();
 
   return (
     <>
@@ -19,7 +20,9 @@ function App() {
               <nav className="nav-bar">
                  <Link to="/" className="nav-link">Home</Link>
                  <Link to="/store-browser" className="nav-link">Loja</Link>
-                 <Link to="/shopping-cart" className="nav-link">Carrinho</Link>
+                 <Link to="/shopping-cart" className="nav-link">
+                  Carrinho {getCartCount() > 0 && `(${getCartCount()})`}
+                  </Link>
                </nav>
             </div>
          </header>
@@ -33,6 +36,14 @@ function App() {
      </div>
     </>
   )
+}
+
+function App() {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
+  );
 }
 
 export default App
