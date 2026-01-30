@@ -1,4 +1,5 @@
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router';
 import styles from './ShoppingCart.module.css';
 
 const ShoppingCart = () => {
@@ -9,21 +10,23 @@ const ShoppingCart = () => {
          <div className={styles.emptyCart}>
             <h1>Seu Carrinho está Vazio</h1>
             <p>Adicione alguns produtos incríveis da nossa loja!</p>
-            <a href="/store-browser" className={styles.shopButton}>
+            <Link to="/store-browser" className={styles.shopButton}>
                Ir para a Loja
-            </a>
+            </Link>
          </div>
       );
    }
 
    return (
+      <>
+      <h1>Seu Carrinho</h1>
+
       <div className={styles.cartContainer}>
-         <h1>Seu Carrinho</h1>
          
          <div className={styles.cartItems}>
             {cartItems.map(item => (
                <div key={item.id} className={styles.cartItem}>
-                  <img src={item.images[0]} alt={item.name} />
+                  <img className={styles.itemImage} src={item.images} alt={item.name} />
                   <div className={styles.itemInfo}>
                      <h3>{item.name}</h3>
                      <p className={styles.itemPrice}>R$ {item.price.toFixed(2)}</p>
@@ -64,14 +67,17 @@ const ShoppingCart = () => {
                <span>Total:</span>
                <span>R$ {getCartTotal().toFixed(2)}</span>
             </div>
-            <button className={styles.checkoutButton}>
-               Finalizar Compra
-            </button>
-            <button className={styles.clearButton} onClick={clearCart}>
-               Limpar Carrinho
-            </button>
+            <div className={styles.summaryButtons}>
+               <button className={styles.checkoutButton}>
+                  Finalizar Compra
+               </button>
+               <button className={styles.clearButton} onClick={clearCart}>
+                  Limpar Carrinho
+               </button>
+            </div>
          </div>
       </div>
+      </>
    );
 };
 
