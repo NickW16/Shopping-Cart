@@ -58,17 +58,17 @@ const MainPage = () => {
                <h2>Por que escolher Aramaker?</h2>
                
                <div className={styles.feature}>
-                  <h3>✨ Impressão 3D de Alta Qualidade</h3>
+                  <h3> Impressão 3D de Alta Qualidade</h3>
                   <p>Utilizamos tecnologia de ponta e materiais premium (PLA, ABS, PETG) para garantir produtos duráveis e detalhados.</p>
                </div>
 
                <div className={styles.feature}>
-                  <h3>🎨 Pintura Artesanal Personalizada</h3>
+                  <h3> Pintura Artesanal Personalizada</h3>
                   <p>Cada peça é pintada à mão por artistas especializados, trazendo vida e realismo aos seus personagens favoritos.</p>
                </div>
 
                <div className={styles.feature}>
-                  <h3>⚡ Projetos Sob Medida</h3>
+                  <h3> Projetos Sob Medida</h3>
                   <p>Precisa de algo único? Trabalhamos com modelos customizados! Entre em contato e transforme sua ideia em realidade.</p>
                </div>
 
@@ -78,7 +78,7 @@ const MainPage = () => {
                </div>
 
                <div className={styles.timing}>
-                  <h3>⏱️ Prazo de Produção:</h3>
+                  <h3> Prazo de Produção:</h3>
                   <ul>
                      <li>Produtos em estoque: envio em até 3 dias úteis</li>
                      <li>Produtos sob encomenda: 10-15 dias úteis</li>
